@@ -21,10 +21,10 @@ def getValueExcel(filename,cellname):
 
 
 
-#def writeUtf8(filename, data):
- #   f=io.open(filename,mode='a',encoding='utf-8')
-  #  f.write(data+'\n')
-   # f.close()
+def writeUtf8(filename, data):
+    f=io.open(filename,mode='a',encoding='utf-8')
+    f.write(data+'\n')
+    f.close()
 #f=open(filename,'a')
 #regex1=re.compile(r'anh (.*) dep')
 #writeUtf8(filename,'hoàn'+'\n')
