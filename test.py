@@ -1,12 +1,13 @@
+import json
 import re
 import os
 import io
 import numpy
 import openpyxl as xl
+import requests
+filename = 'test.txt'
 
-filename='test.txt'
-
-def updateValueExcel(filename,cellname,value):
+'''def updateValueExcel(filename,cellname,value):
     wb=xl.load_workbook(filename)
     Sheet1=wb['Sheet1']
     Sheet1[cellname].value=value
@@ -64,4 +65,49 @@ updateValueExcel(filename,cellname_2,list_lines[1]);
 
 #kq=regex1.findall(demo)
 #name=kq.group(0)
-#print(kq[1:3])
+#print(kq[1:3])'''
+
+'''response = requests.get('https://api.github.com')
+response = requests.get(
+    'https://api.github.com/search/repositories',
+    params={'q': 'requests+language:python'},
+    headers={'Accept': 'application/vnd.github.v3.text-match+json',
+
+             },
+)
+print(response.status_code)
+print(response.json())
+# print(response.headers['Content-Type'])'''
+
+'''import requests
+import io 
+import bs4
+import re 
+
+f=io.open('code.html',mode='a',encoding='utf-8')
+response=requests.get('https://www.coingecko.com/en')
+doc_html=response.text
+#f.write(doc_html)
+f.close()
+soup=bs4.BeautifulSoup(doc_html,'lxml')
+#print(soup.div)
+eles=soup.find('tbody') 
+#ele=eles.find('div',class_='entry-content').p.text
+print(eles)
+regex1=re.compile(r'<title> (.*?) </title>')
+kq=regex1.search(doc_html)
+name=kq.group(1)
+print(name)'''
+'''for ele in eles:
+
+    print(ele.get_text())
+    print('\n')'''
+
+#print(eles)
+
+
+
+
+
+
+
